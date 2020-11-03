@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SmokeTest">
+    <parameter name="username" value="Your SheetName"/>
+    <parameter name="password" value="your row number"/>
+    <parameter name="sheetname" value="Your SheetName"/>
+    <parameter name="row-number" value="your row number"/>
+    <parameter name="colBNum" value="Your Column number"/>
+<listeners>
+<listener class-name ="com.selenium.automation.achala.Listeners.TCActivity">
+
+</listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.selenium.automation.achala.bussinesscripts.Login"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- SmokeTest -->

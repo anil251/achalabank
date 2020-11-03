@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeTest]" parallel="none">
+  <listeners>
+    <listener class-name="com.selenium.automation.achala.Listeners.TCActivity"/>
+  </listeners>
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="com.selenium.automation.achala.bussinesscripts.Login">
+        <methods>
+          <include name="SkipTest"/>
+          <include name="openBrowser"/>
+          <include name="getDriver"/>
+          <include name="init"/>
+          <include name="BeforeTCExcution"/>
+        </methods>
+      </class> <!-- com.selenium.automation.achala.bussinesscripts.Login -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SmokeTest] -->
