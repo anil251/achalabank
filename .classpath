@@ -28,7 +28,7 @@
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/jasper-compiler-jdt-5.5.15.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/jasper-runtime-5.5.15.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/javax.servlet-api-3.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/jcommander-1.48.jar" sourcepath="C:/Users/AS/.m2/repository/com/beust/jcommander/1.48/jcommander-1.48-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/jetty-continuation-9.2.13.v20150730.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/jetty-http-9.2.13.v20150730.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/selenium-2.51.0/libs/jetty-io-9.2.13.v20150730.jar"/>
@@ -81,7 +81,7 @@
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Apachi_poi_api/poi-4.1.2/lib/SparseBitSet-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Dom4j jar files/dom4j-1.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Extend Reports Jar Files/bson-3.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Extend Reports Jar Files/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Extend Reports Jar Files/extentreports-2.41.2.jar" sourcepath="C:/Users/AS/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Extend Reports Jar Files/freemarker-2.3.23.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Extend Reports Jar Files/jsoup-1.8.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Extend Reports Jar Files/mongodb-driver-3.0.4.jar"/>
@@ -108,5 +108,7 @@
 	<classpathentry kind="lib" path="C:/Users/AS/Downloads/jaxen-1.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Apachi_poi_api/poi-4.1.2/ooxml-lib/curvesapi-1.06.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AS/Desktop/Apachi_poi_api/poi-4.1.2/ooxml-lib/xmlbeans-3.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AS/Desktop/ATU Test Script Recorder/ATUTestRecorder_2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

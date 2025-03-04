@@ -2,12 +2,14 @@ package com.selenium.automation.achala.BaseEngine;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -19,10 +21,11 @@ import org.testng.annotations.BeforeTest;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import com.selenium.automation.achala.Utilities.DriverValues;
 import com.selenium.automation.achala.Utilities.ScreenShortUtilities;
-import com.selenium.automation.achala.bussinesscripts.Login;
+
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
 
 public class BaseTest {
 	
@@ -31,6 +34,7 @@ public class BaseTest {
 	private static String tcname;
 	private static ExtentReports extentReports;
 	private static ExtentTest extentTest;
+	private ATUTestRecorder recorder;
 	
 	@BeforeSuite
 	public void openBrowser() {
@@ -87,15 +91,25 @@ public class BaseTest {
 	
 	
 	@BeforeMethod
-	public void BeforeTCExcution(Method method) {
+	public void BeforeTCExcution(Method method) throws ATUTestRecorderException {
 		tcname = method.getName();
 		System.out.println("THE PRESENT TEST CASE NAME IS : " +tcname);
+		//SimpleDateFormat dateTimeFormatter = new SimpleDateFormat("yy-MM-DD  HH-MM-SS");
+		DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd  HH-mm-ss");
+		Date date = new Date();
+		try {
+		 recorder = new ATUTestRecorder("H:\\Workspace\\Achala_Bank\\Execution_Videos", "RecordedVideo-",false);
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
+		recorder.start();
 		extentTest =extentReports.startTest(tcname);
 		extentTest.log(LogStatus.INFO, "The Currently Executing Test Case is :"+tcname);
 
 	}
 	@AfterTest
-	public void generateReports() {
+	public void generateReports() throws ATUTestRecorderException {
 	Optional optional = Optional.ofNullable(extentReports);
 	if (optional.isPresent()) 
 	{
@@ -106,8 +120,10 @@ public class BaseTest {
 	}
 	else {
 		System.out.println("Extents Reports Pointing To Null");
+		
 	  }
 	 //extentReports.close();
+	recorder.stop();
 
 	}
 	
@@ -127,6 +143,7 @@ public class BaseTest {
 	public static ExtentTest getExtentTest() {
 		return extentTest;
 	}
+	
 	
 	
 	
